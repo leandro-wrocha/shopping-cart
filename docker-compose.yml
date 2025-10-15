@@ -12,13 +12,7 @@ services:
       - "${APP_PORT}:9000"
     volumes:
       - ./src:/var/www:rw
-      - ./.env:/var/www/.env:rw
-      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini:ro
-    environment:
-      - XDEBUG_MODE=develop,debug
-      - XDEBUG_START_WITH_REQUEST=trigger
-      - XDEBUG_CLIENT_HOST=host.docker.internal
-      - XDEBUG_CLIENT_PORT=9003
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini:ro
     env_file:
       - .env
     networks:
