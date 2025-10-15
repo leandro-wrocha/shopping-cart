@@ -11,7 +11,7 @@ services:
     ports:
       - "${APP_PORT}:9000"
     volumes:
-      - ./src:/var/www:rw
+      - ./src/:/var/www:rw
       - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini:ro
     env_file:
       - .env
@@ -28,7 +28,7 @@ services:
     ports:
       - "${NGINX_PORT}:80"
     volumes:
-      - ./src:/var/www:ro
+      - ./src/:/var/www:ro
       - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
       - default
