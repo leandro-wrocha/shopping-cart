@@ -1,12 +1,5 @@
 <?= $this->extend('layouts/home') ?>
 
-   <!-- Additional styles for this page -->
-   <style>   
-      .hero_area {
-         min-height: 100vh !important;
-      }
-   </style>
-
 <?php $this->startSection('slider-section') ?>
     <!-- slider section -->
       <?= $this->include('partials/home/section-slider') ?>

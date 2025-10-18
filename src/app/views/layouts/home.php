@@ -22,6 +22,12 @@
         <link href="css/responsive.css" rel="stylesheet" />
 
         <?php $this->section('styles') ?>
+
+        <style type="text/css">
+            .hero_area {
+                min-height: 0 !important;
+            }
+        </style>
     </head>
 
     <body>
