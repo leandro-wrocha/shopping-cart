@@ -42,4 +42,15 @@ class Uri {
     {
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/';
     }
+
+    /**
+     * Get the base URL of the application.
+     * 
+     * @return string
+     */
+    public static function base($path = ''): string
+    {
+        $baseUrl = rtrim((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://{$_SERVER['HTTP_HOST']}", '/');
+        return $baseUrl . '/' . ltrim($path, '/');
+    }
 }

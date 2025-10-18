@@ -8,8 +8,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $this->data['title'] = 'Home';
+        $this->data['title'] = 'Famms - Fashion';
 
-        $this->render('index');
+        $this->render('index', $this->data);
     }
 }

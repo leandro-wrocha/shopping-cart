@@ -115,7 +115,7 @@ class View
     public function include(string $partial, array $data = []): void
     {
         extract($this->escapeData($data));
-        include "{$this->basePath}/partials/{$partial}.php";
+        include "{$this->basePath}/{$partial}.php";
     }
 
     /**
